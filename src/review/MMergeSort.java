@@ -2,10 +2,10 @@ package review;
 
 import java.util.Random;
 
-public final class MQuickSort {
+public final class MMergeSort {
 
     
-    private MQuickSort(){}
+    private MMergeSort(){}
     
     public static Integer[] sort(Integer[] c) {
 	return quickSort(c, 0  , c.length -1);
@@ -51,7 +51,7 @@ public final class MQuickSort {
 	    System.out.print(ar[i] + " ");
 	}
 	System.out.println();
-        MQuickSort.sort(ar);
+        MMergeSort.sort(ar);
         prev = ar[0];
         System.out.print(ar[0] + " ");
         for (int i = 1 ; i < 5 ; i++) {
