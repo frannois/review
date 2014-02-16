@@ -8,39 +8,27 @@ public final class MMergeSort {
     private MMergeSort(){}
     
     public static Integer[] sort(Integer[] c) {
-	return quickSort(c, 0  , c.length -1);
+	return mergeSort(c);
     }
     
-    private static Integer[] quickSort(Integer[] c, int start, int end) {
+    private static Integer[] mergeSort(Integer[] c) {
 	
-	if(end - start  <= 1) return c;
-	int i = start;
-	int j = end ;
-	int tmp;
-	int pivot = c[(end + start) / 2];
+	int length = c.length / 2;
+	Integer[] fHalf = new Integer[length];
+	Integer[] sHalf = new Integer[c.length-length];
+	System.arraycopy(c, 0, fHalf, 0, fHalf.length);
+	System.arraycopy(c, length, sHalf, 0, sHalf.length);
 	return merge(mergeSort(sHalf), mergeSort(fHalf));
 	
-	while (i <= j) {
-	    while(c[i] < pivot) {
-		i++;
-	    }
-	    while(c[j] > pivot) {
-		j--;
-	    }
-	    if(i <= j) {
-		tmp = c[i];
-		c[i] = c[j];
-		c[j] = tmp;
-		i++;
-		j--;
-	    }
-	}
-	if(start < j )
-	quickSort(c, start, j);
-	if(i < end  )
-	quickSort(c, i  , end);
+    }
 
-	return c;
+    private static Integer[] merge(Integer[] mergeSort, Integer[] mergeSort2) {
+	Integer[] merged = new Integer[mergeSort.length+mergeSort2.length];
+	int i = 0;
+	int j = 0;
+	while()
+	
+	    return merged;
     }
 
     public static void main(String[] args) {
