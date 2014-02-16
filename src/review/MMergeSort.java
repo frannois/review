@@ -18,6 +18,7 @@ public final class MMergeSort {
 	int j = end ;
 	int tmp;
 	int pivot = c[(end + start) / 2];
+	return merge(mergeSort(sHalf), mergeSort(fHalf));
 	
 	while (i <= j) {
 	    while(c[i] < pivot) {
