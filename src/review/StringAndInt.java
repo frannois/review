@@ -17,6 +17,9 @@ public class StringAndInt {
 	    answer += Integer.valueOf(Character.getNumericValue(number.charAt(i)));
 	    i++;
 	}
+	if ( answer < 0) {
+		throw new IllegalStateException("");
+	}
 	
 	if(negative) {
 	    answer *= -1;
